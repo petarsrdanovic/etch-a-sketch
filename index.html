@@ -8,6 +8,8 @@
     </head>
 
     <body>
+        <button class="res">Clear</button>
+
         <div class="container">
 
         </div>
@@ -15,11 +17,27 @@
         <script>
             const container = document.querySelector(".container");
 
+
             for (i = 0; i <= 255; i++) {
-            const div = document.createElement("div");
-            container.appendChild(div);
-            div.style.border = "1px solid black";
+                const div = document.createElement("div");
+                function hoverDiv() {
+                div.style.backgroundColor = "black";
+                }
+                div.addEventListener("mouseenter", hoverDiv);
+                container.appendChild(div);
+                div.style.border = "1px solid black";
+
+                const res = document.querySelector("button");
+                function reset() {
+                    div.style.backgroundColor = "white";
+                }
+                res.addEventListener("click", reset);
             }
+
+            
+
+ 
+
         </script>
     </body>
 </html>

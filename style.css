@@ -1,20 +1,36 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 100px;
+    align-items: center;
+    gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .container {
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    width: 520px;
+    width: 480px;
+    height: 480px;
 }
 
 .container div {
-    height: 30px;
-    width: 30px;
+    box-sizing: border-box;
+    flex: 1 0 auto;
+    width: 6.25%;
+    height: 6.25%;
 }
 
-.container div:hover {
-    background-color: black;
+.res {
+    width: 75px;
+    padding: 10px;
+    background-color: lime;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
 }
+
+
+
