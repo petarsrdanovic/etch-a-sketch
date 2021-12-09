@@ -18,10 +18,12 @@ body {
 
 .container div {
     box-sizing: border-box;
+    border: 1px black solid;
     flex: 1 0 auto;
     width: 6.25%;
     height: 6.25%;
 }
+
 
 .res {
     width: 75px;
