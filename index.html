@@ -19,6 +19,7 @@
             for (i = 0; i < 256; i++) {
                 const div = document.createElement("div");
                 container.appendChild(div);
+                div.classList.add("squares");
 
                 function hoverDiv() {
                     return div.style.backgroundColor = "black";
@@ -29,14 +30,18 @@
             function reset() {
                 let question = prompt("How many squares per line (pls less than 100)?");
                 question =  parseInt(question);
+                let size = 480 / question;
 
                 while (container.firstChild) {
                         container.removeChild(container.firstChild);
-                    }
+                }
 
-                for (j = 0; j < question; j++) {
+                for (j = 0; j < question * question; j++) {
                     const newDiv = document.createElement("div");
                     container.appendChild(newDiv);
+                    newDiv.classList.add("newsquares");
+                    newDiv.style.width = size + "em";
+                    newDiv.style.height = size + "em";
 
                     function hoverNewDiv() {
                         return newDiv.style.backgroundColor = "black";
